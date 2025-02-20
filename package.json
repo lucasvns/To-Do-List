@@ -1,0 +1,22 @@
+{
+  "name": "to-do-list",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app/server.js",
+    "dev": "nodemon app/server.js",
+    "lint": "standard"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "standard": "^17.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
