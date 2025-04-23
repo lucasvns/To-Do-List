@@ -6,7 +6,8 @@ export default {
   create,
   update,
   updateStatus,
-  destroy
+  destroy, 
+  cleanTasks
 }
 
 function find () {
@@ -62,11 +63,15 @@ function updateStatus (id, completed) {
 function destroy (id) {
   const taskIndice = tasks.findIndex((task) => task.id === id)
 
-  if (!taskIndice) {
+  if (taskIndice < 0) {
     throw new Error('Tarefa não encontrada')
   }
 
   tasks.splice(taskIndice, 1)
 
   return { message: 'Tarefa excluida' }
+}
+
+function cleanTasks () {
+  tasks.length = 0
 }

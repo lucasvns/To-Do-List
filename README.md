@@ -9,6 +9,7 @@ Esta é uma API REST simples para gerenciamento de tarefas (To-Do List), desenvo
 - **Node.js**
 - **Express.js**
 - **CORS**
+- **Jest**
 
 ---
 
@@ -25,6 +26,9 @@ Esta é uma API REST simples para gerenciamento de tarefas (To-Do List), desenvo
 │   ├── middlewares/
 │   │   ├── logger.js
 │   ├── app.js
+├── test/
+│   ├── unit/
+│   │   ├── task.test.js
 ├── server.js
 ├── package.json
 ├── README.md
@@ -169,9 +173,33 @@ const logger = (req, res, next) => {
 };
 ```
 
+## 📌 Testes Unitários
+A API inclui testes unitários para garantir o funcionamento correto de suas funcionalidades. Os testes são realizados com Jest.
+
+1. Rode os testes com o comando
+   ```sh
+   npm test
+   ```
+
+📝 Testes Disponíveis:
+
+Criação de Tarefas: Verifica se as tarefas estão sendo criadas corretamente e se erros são lançados quando os dados estão incompletos.
+
+Busca de Tarefas: Verifica se as tarefas podem ser encontradas pelo ID e se um erro é lançado quando a tarefa não existe.
+
+Atualização de Tarefas: Verifica se é possível atualizar o título, descrição e status de uma tarefa.
+
+Exclusão de Tarefas: Verifica se as tarefas podem ser deletadas corretamente e se um erro é lançado ao tentar excluir uma tarefa inexistente.
+
+```javascript
+  it('should throw error when creating without title or description', () => {
+    expect(() => TaskService.create()).toThrow('Campos incompletos')
+  })
+```
+
 ---
 
 ## 📌 Melhorias Futuras
 - [ ] Persistência de dados com um banco de dados
 - [ ] Autenticação e autorização
-- [ ] Testes automatizados
+- [ ] Testes de integração
