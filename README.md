@@ -202,4 +202,3 @@ Exclusão de Tarefas: Verifica se as tarefas podem ser deletadas corretamente e 
 ## 📌 Melhorias Futuras
 - [ ] Persistência de dados com um banco de dados
 - [ ] Autenticação e autorização
-- [ ] Testes de integração

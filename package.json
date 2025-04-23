@@ -9,7 +9,8 @@
     "dev": "nodemon app/server.js",
     "lint": "standard",
     "test": "jest",
-    "test:unit": "jest test/unit"
+    "test:unit": "jest test/unit",
+    "test:integration": "jest test/integration"
   },
   "author": "",
   "license": "ISC",

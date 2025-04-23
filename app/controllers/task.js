@@ -16,7 +16,7 @@ function create (req, res) {
 
     res.status(201).json(task)
   } catch (error) {
-    res.status(400).json(error)
+    return res.status(400).json({ message: 'Erro', errors: error.message })  
   }
 }
 
@@ -28,7 +28,7 @@ function update (req, res) {
 
     res.status(200).json(task)
   } catch (error) {
-
+    return res.status(400).json({ message: 'Erro', errors: error.message })
   }
 }
 
@@ -40,7 +40,7 @@ function updateStatus (req, res) {
 
     res.status(200).json(task)
   } catch (error) {
-    res.status(400).json(error)
+    return res.status(400).json({ message: 'Erro', errors: error.message })  
   }
 }
 
@@ -50,7 +50,7 @@ function find (_req, res) {
 
     res.status(200).json(tasks)
   } catch (error) {
-    res.status(400).json(error)
+    return res.status(400).json({ message: 'Erro', errors: error.message })  
   }
 }
 
@@ -61,7 +61,7 @@ function findById (req, res) {
 
     res.status(200).json(task)
   } catch (error) {
-    res.status(400).json(error)
+    return res.status(400).json({ message: 'Erro', errors: error.message })
   }
 }
 
@@ -72,6 +72,6 @@ function destroy (req, res) {
 
     res.status(200).json(task)
   } catch (error) {
-    res.status(400).json(error)
+    return res.status(400).json({ message: 'Erro', errors: error.message })  
   }
 }

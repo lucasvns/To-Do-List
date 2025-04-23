@@ -7,8 +7,8 @@ const router = express.Router()
 router.get('/', TaskController.find)
 router.get('/:id', TaskController.findById)
 router.post('/', TaskController.create)
-router.put('/', TaskController.update)
+router.put('/:id', TaskController.update)
 router.patch('/:id', TaskController.updateStatus)
-router.delete('/', TaskController.destroy)
+router.delete('/:id', TaskController.destroy)
 
 export default router
