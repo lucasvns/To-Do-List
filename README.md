@@ -29,6 +29,8 @@ Esta é uma API REST simples para gerenciamento de tarefas (To-Do List), desenvo
 ├── test/
 │   ├── unit/
 │   │   ├── task.test.js
+│   ├── integration/
+│   │   ├── task.test.js
 ├── server.js
 ├── package.json
 ├── README.md
@@ -173,8 +175,8 @@ const logger = (req, res, next) => {
 };
 ```
 
-## 📌 Testes Unitários
-A API inclui testes unitários para garantir o funcionamento correto de suas funcionalidades. Os testes são realizados com Jest.
+## 📌 Testes
+A API inclui testes unitários e de integração para garantir o funcionamento correto de suas funcionalidades. Os testes são realizados com Jest.
 
 1. Rode os testes com o comando
    ```sh
@@ -202,4 +204,3 @@ Exclusão de Tarefas: Verifica se as tarefas podem ser deletadas corretamente e 
 ## 📌 Melhorias Futuras
 - [ ] Persistência de dados com um banco de dados
 - [ ] Autenticação e autorização
-- [ ] Testes de integração

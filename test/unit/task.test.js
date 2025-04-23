@@ -18,7 +18,7 @@ describe('Task Service', () => {
       expect(task.completed).toBe(false)
     })
 
-    it('should throw error when creating without title or description', () =>{
+    it('should throw error when creating without title or description', () => {
       expect(() => TaskService.create()).toThrow('Campos incompletos')
     })
   })
